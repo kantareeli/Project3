@@ -1,0 +1,73 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    
+
+    <title>{% block title %}Welcome!{% endblock %}</title>
+ 
+
+    <!-- Bootstrap core CSS    -->
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+            {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <header class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Product</h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link active" href="/Netbeansprojects/Project3/Web/app_dev.php/product">Home</a>
+                <a class="nav-link" href="#">Add</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
+          </header>
+
+          <main role="main" class="inner cover">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          {% block body %}{% endblock %}
+                        </div>
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+          </main>
+
+          <footer class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </footer>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+  {% block javascripts %}{% endblock %}
+  </body>
+</html>

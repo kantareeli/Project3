@@ -1,0 +1,47 @@
+{% extends "product/base.html.twig" %}
+
+{% block body %}
+    <h1>Product List </h1><br>
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for product in products %}
+    <tr>
+      <th scope="row">{{ product.id }}</th>
+      <td>{{ product.name }}</td>
+      <td>{{ product.detail }}</td>
+      <td><a href="/Netbeansprojects/Project3/Web/app_dev.php/product/detail/{{ product.id }}" class="btn btn-success" >Detail</a> 
+          <a href="/Netbeansprojects/Project3/Web/app_dev.php/product/delete/{{ product.id }}" class="btn btn-danger" >Delete</a>
+      </td>
+      
+    </tr>
+      {% endfor%}
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>
+      
+        {% for f in fizz %}
+            {{ f }}
+          {% endfor %}
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
