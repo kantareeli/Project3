@@ -46,7 +46,7 @@ class productController extends Controller
         }
         
         return $this->render('product/list.html.twig',array(
-            'products' => $products, 'fizz' => $fizz
+            'products' => $products, 'fizz' => $fizz, 'f2'=> 'f2'
         ));
     }
     
